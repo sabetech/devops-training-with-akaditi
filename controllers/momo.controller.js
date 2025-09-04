@@ -224,7 +224,7 @@ const balanceCheck = async (req, res) => {
     });
   } catch (error) {
     logger.error('Balance check failed', { error: error.message });
-    res.status(500).json({
+    res.status(200).json({
       success: false,
       error: 'Balance check failed',
       timestamp: new Date().toISOString()
